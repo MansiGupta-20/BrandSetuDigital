@@ -7,10 +7,22 @@ import PostModal from "../Servive/servicemodals";
 import "../../Style/Home.css";
 import "../../App.css";
 import "../../Style/Services.css";
+import Influencer from "../../assets/influencer.avif";
+import Development from "../../assets/app-dev.webp";
+import CGIImg from "../../assets/CGI.avif";
+import Graphic from "../../assets/graphics.jpg";
+import Events from "../../assets/events.webp";
+import Website from "../../assets/website-design.avif";
+import SEOImg from "../../assets/SEO.jpg";
+import SocialMedia from "../../assets/social-media.jpg";
+import Ads from "../../assets/ads.jpg";
+import Branding from "../../assets/branding.jpg";
+import Maintainance from "../../assets/maintianance.avif";
+import CRMImg from "../../assets/CRM.avif";
 
 const posts = [
   {
-    img: "https://www.monitoratec.com.br/blog/wp-content/uploads/2022/12/Depositphotos_72122701_XL-740x493.jpg",
+    img: Influencer,
     category: "Marketing",
     title: "Influencer Marketing",
     desc: "We grow brand trust and reach through authentic influencer collaborations across multiple platforms.",
@@ -26,7 +38,7 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=740&h=493&fit=crop",
+    img: Development,
     category: "Development",
     title: "App Development",
     desc: "We build secure, scalable, and high-performing mobile applications tailored to your business needs.",
@@ -42,7 +54,7 @@ const posts = [
     ],
   },
   {
-    img: "https://img.freepik.com/free-photo/futuristic-robot-hummingbird_23-2151443873.jpg?semt=ais_hybrid&w=740&q=80",
+    img: CGIImg,
     category: "Creative",
     title: "CGI (Computer Generated Imagery) Ads",
     desc: "We create eye-catching CGI ads using animations and 3D visuals to showcase your products effectively.",
@@ -58,7 +70,7 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=740&h=493&fit=crop",
+    img: Graphic,
     category: "Creative",
     title: "Graphics Design",
     desc: "We transform ideas into professional and visually compelling designs to strengthen brand identity.",
@@ -74,7 +86,7 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=740&h=493&fit=crop",
+    img: Events,
     category: "Media",
     title: "Event / Product Shoot & Promotion",
     desc: "Professional photography and videography to showcase your products and events creatively.",
@@ -90,7 +102,7 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=740&h=493&fit=crop",
+    img: Website,
     category: "Development",
     title: "Website Design & Development",
     desc: "We create fast, responsive, and conversion-focused websites that represent your brand professionally.",
@@ -106,7 +118,7 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=740&h=493&fit=crop",
+    img: SEOImg,
     category: "Marketing",
     title: "SEO & Local SEO",
     desc: "Boost your website visibility and search performance using proven SEO and local SEO strategies.",
@@ -122,7 +134,7 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=740&h=493&fit=crop",
+    img: SocialMedia,
     category: "Marketing",
     title: "Social Media Marketing & Brand Promotion",
     desc: "We grow your brand presence on social platforms through strategic content and campaigns.",
@@ -138,7 +150,7 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=740&h=493&fit=crop",
+    img: Ads,
     category: "Advertising",
     title: "Google Ads & Lead Generation",
     desc: "We run performance-driven paid campaigns to generate leads and maximize ROI effectively.",
@@ -154,7 +166,7 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=740&h=493&fit=crop",
+    img: Branding,
     category: "Branding",
     title: "Branding & Graphic Design",
     desc: "We create consistent brand identities that communicate trust, clarity, and professionalism.",
@@ -170,7 +182,7 @@ const posts = [
     ],
   },
   {
-    img: "https://img.freepik.com/premium-photo/3d-website-testing-warning-error-people-examining-operating-system-crash-web-page_776674-578888.jpg?semt=ais_hybrid&w=740&q=80",
+    img: Maintainance,
     category: "Support",
     title: "Website Maintenance & Technical Support",
     desc: "We ensure your website stays secure, updated, and fully functional at all times.",
@@ -186,9 +198,9 @@ const posts = [
     ],
   },
   {
-    img: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=740&h=493&fit=crop",
-    category: "Automation",
+    img: CRMImg,
     title: "CRM Setup & Business Automation",
+    category : "Automation",
     desc: "We help automate business processes, manage leads efficiently, and improve workflows with CRM solutions.",
     description:
       "CRM Setup & Business Automation streamlines your business operations by automating workflows, managing leads, and improving customer interactions. Our solutions integrate sales, communication, and analytics tools to provide efficiency, clarity, and actionable insights across departments, helping businesses save time and resources.",
@@ -246,10 +258,10 @@ const DetailedServices = () => {
     <section className="py-5">
       <div className="container text-center mb-5">
         <h1 className="text-brand display-3 fw-bold mb-3">
-          BrandSetu Services
+          BrandSetu<span className="text-danger"> Marketing</span> Services
         </h1>
-        <h5 className="text-danger fw-semibold">
-          An insight to the incredible experience in the world
+        <h5 className="text-dark opacity-75 fw-semibold">
+          Best Digital marketing services that help your brand grow
         </h5>
 
         <div className="d-flex justify-content-center gap-3 mt-4 flex-wrap">
@@ -285,7 +297,7 @@ const DetailedServices = () => {
                 <div className="d-flex flex-column justify-content-between w-100">
                   <div>
                     <h4 className="fw-bold">{post.title}</h4>
-                    <p className="text-dark fw-semibold">{post.desc}</p>
+                    <p className="text-dark fw-semibold ">{post.desc}</p>
                   </div>
 
                   <div className="mt-3">

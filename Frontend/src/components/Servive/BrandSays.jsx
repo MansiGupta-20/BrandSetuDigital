@@ -4,7 +4,6 @@ import "../../Style/Services.css";
 import "../../App.css";
 import { motion, AnimatePresence } from "framer-motion";
 
-/* 🔥 ULTRA LIGHT IMAGE OPTIMIZER */
 const img = (url) =>
   `${url}?auto=format&fit=crop&w=480&q=50`;
 
@@ -13,7 +12,7 @@ const brands = [
     name: "UrbanNest",
     logo: "https://dummyimage.com/140x50/000/fff&text=UrbanNest",
     says:
-      "BrandSetu didn’t just promote us — they shaped how people feel about our brand.",
+      "BrandSetu didn’t just promote us - they shaped how people feel about our brand.",
     work: "Influencer Marketing • CGI Ads • Social Media Strategy",
     images: [
       img("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAhgU-IKrEg7P61A6lk7ReEBb0XCTj_t0wHw&s"),
@@ -101,7 +100,7 @@ const BrandCard = memo(({ brand, reverse, dark }) => (
       <h2 className="text-warning">{brand.name}</h2>
       <p className="brand-says">“{brand.says}”</p>
       <span className="brand-work fw-bold">
-        WORK WE DID — <strong>{brand.work}</strong>
+        WORK WE DID -- <strong>{brand.work}</strong>
       </span>
     </div>
 

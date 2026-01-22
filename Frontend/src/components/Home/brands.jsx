@@ -105,10 +105,11 @@ export default function Brands() {
         >
           <span className="brands-pill fw-bold">OUR PARTNERS</span>
           <h2 className="brands-title display-4 fw-bold">
-            Brands We <span className="text-danger">Collaborate With</span>
+            Brands Who <span className="text-danger colab">Trust Us</span>
           </h2>
           <p className="brands-subtitle fw-semibold">
-            Trusted by growing businesses across industries.
+            Long-term partnerships built on trust, strategy, and consistently
+            delivered results
           </p>
         </motion.div>
 

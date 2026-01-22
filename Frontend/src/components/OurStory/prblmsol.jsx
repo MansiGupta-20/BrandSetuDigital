@@ -3,13 +3,13 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "../../Style/OurStory.css";
 import "../../App.css";
 
-import scatteredJourneyImage from "../../assets/prblmimg.jpg";
-import solutionPlatformImage from "../../assets/solimg.webp";
+import scatteredJourneyImage from "../../assets/digital-growth-solutions.jpg";
+import solutionPlatformImage from "../../assets/digital-marketing-company.webp";
 
 function TravelSolutionPage() {
   return (
     <div className="travel-solution-page position-relative">
-      <Container className="py-5">
+      <Container>
         {/* HEADER */}
         <div className="text-center mb-5">
           <span className="badge bg-danger-subtle text-danger px-3 py-2 rounded-pill mb-3">
@@ -24,7 +24,7 @@ function TravelSolutionPage() {
             className="lead text-muted fw-semibold mx-auto"
             style={{ maxWidth: 700 }}
           >
-            Millions of Businessman face the same frustration every day – a
+            Millions of Businessman face the same frustration every day - a
             fragmented experience that turns planning a Business into a
             stressful puzzle.
           </p>
@@ -43,13 +43,13 @@ function TravelSolutionPage() {
             <h2 className="fw-bold mb-3 text-brand">
               The Incomplete Brand Journey
             </h2>
-            <p className="text-muted fw-bold">
+            <p className="text-muted text-justify fs-5 fw-semibold">
               Today’s businesses struggle to manage branding, marketing,
               automation, and digital growth across multiple disconnected
               agencies, tools, and platforms.
             </p>
-            <p className="fw-bold mb-1">The result?</p>
-            <p className="text-muted fw-semibold">
+            <p className="fw-bold fs-4 mb-1">The result?</p>
+            <p className="text-muted fs-5 text-justify fw-semibold">
               Inconsistent brand identity, higher costs, delayed execution, and
               the constant uncertainty of whether efforts are actually driving
               growth.
@@ -89,7 +89,7 @@ function TravelSolutionPage() {
                     style={{ fontSize: 34 }}
                   ></i>
                   <Card.Title className="fw-bold mt-2">{item.title}</Card.Title>
-                  <Card.Text className="text-muted small">
+                  <Card.Text className="text-muted  small">
                     {item.desc}
                   </Card.Text>
                 </Card.Body>
@@ -99,7 +99,7 @@ function TravelSolutionPage() {
         </Row>
 
         {/* SOLUTION */}
-        <div className="text-center my-5 pt-5 mt-5">
+        <div className="text-center pt-5 my-5 mt-5">
           <span className="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3">
             Our Solution
           </span>
@@ -110,28 +110,28 @@ function TravelSolutionPage() {
             className="lead text-muted fw-semibold mx-auto"
             style={{ maxWidth: 700 }}
           >
-            Everything you need for Business – unified, intelligent, and simple.
+            Everything you need for Business - unified, intelligent, and simple.
           </p>
         </div>
 
-        <Row className="align-items-center mb-5">
+        <Row className="align-items-center">
           <Col lg={6}>
             <h2 className="fw-bold mb-3 text-brand">Simplicity at Scale</h2>
 
-            <p className="text-muted fw-semibold mb-3">
+            <p className="text-muted fs-5 text-justify fw-semibold mb-3">
               Growing a brand shouldn’t mean managing multiple agencies,
               scattered tools, or disconnected strategies. BrandSetu brings
               everything together into one unified digital ecosystem.
             </p>
 
-            <p className="text-muted fw-semibold mb-3">
+            <p className="text-muted fs-5 text-justify fw-semibold mb-3">
               From brand identity and creative design to performance marketing,
               automation, and technology, every service works in alignment to
               deliver clarity, consistency, and measurable growth.
             </p>
 
-            <p className="fw-semibold fw-semibold text-muted">
-              As your business scales, BrandSetu scales with you—ensuring your
+            <p className="fw-semibold fs-5 text-justify fw-semibold text-muted">
+              As your business scales, BrandSetu scales with you - ensuring your
               brand stays strong, your messaging stays consistent, and your
               growth stays sustainable.
             </p>

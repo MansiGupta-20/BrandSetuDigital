@@ -3,14 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import StartImg from "../../assets/whatwedo.jpg";
+import StartImg from "../../assets/digital-marketing-services.jpg";
 import CEO from "../OurStory/ceo";
 import Prblmsol from "../OurStory/prblmsol";
 
-import Strategy from "../../assets/strategy.png";
-import Feature from "../../assets/feature.png";
-import innovation from "../../assets/feature2.png";
-import StoryHero from "../../assets/StoryHero.mov";
+import Strategy from "../../assets/strategic-digital-growth-brandsetu.png";
+import Feature from "../../assets/trusted-digital-experience-brandsetu.png";
+import innovation from "../../assets/Innovative-digital-solutions-brandsetu.png";
+import StoryHero from "../../assets/Top-digital-marketing-company.mov";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -56,8 +56,8 @@ const About = () => {
     const playPromise = video.play();
     if (playPromise !== undefined) {
       playPromise.catch(() => {
-        video.muted = true;
-        setAudioOn(false);
+        video.muted = false;
+        setAudioOn(true);
       });
     }
   }, []);
@@ -76,8 +76,8 @@ const About = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 80 && videoRef.current) {
-        videoRef.current.muted = false;
-        setAudioOn(true);
+        videoRef.current.muted = true;
+        setAudioOn(false);
       }
     };
 
@@ -94,7 +94,7 @@ const About = () => {
         top: Math.random() * 100,
         duration: Math.random() * 10 + 12,
       })),
-    []
+    [],
   );
 
   return (
@@ -163,7 +163,7 @@ const About = () => {
       </div>
 
       {/* CONTENT — 100% ORIGINAL */}
-      <div className="container py-5 position-relative z-2">
+      <div className="container py-5 position-relative z-2 py-5 mb-5 pt-5 mt-5">
         <div className="row align-items-center mb-5">
           <div className="col-md-6 mb-4" data-aos="fade-right">
             <div className="about-img-wrap rounded-4 shadow overflow-hidden">
@@ -172,12 +172,12 @@ const About = () => {
           </div>
 
           <div className="col-md-6 ps-md-5" data-aos="fade-left">
-            <h3 className="fw-bold display-5 mb-4 text-center text-md-start">
-              Who <span className="text-danger">We</span> Are?
+            <h3 className="fw-bold display-6 mb-4 text-center text-md-start">
+              Building <span className="text-danger"> BEST </span>Digital Brands
             </h3>
 
             <p className="text-dark text-justify" style={{ lineHeight: 1.8 }}>
-              BrandSetu is a modern digital growth partner that helps brands
+              <span className="text-danger fw-bold fs-4">BrandSetu</span> is a Top digital growth partner that helps brands
               establish a powerful and purposeful online presence. We blend
               creativity, strategy, and technology to craft digital solutions
               that are visually compelling, performance-driven, and built for
@@ -203,49 +203,50 @@ const About = () => {
             </p>
           </div>
         </div>
+        <div className="pt-4 mt-4">
+          <section className="bg-dark position-relative services-section py-5 pt-5 mt-5">
+            <div className="bg-layer position-absolute top-0 start-0 w-100 h-100 mt-5 pt-5">
+              <div className="bg-blob blob-1"></div>
+              <div className="bg-blob blob-2"></div>
+            </div>
 
-        <section className="bg-dark position-relative services-section py-5">
-          <div className="bg-layer position-absolute top-0 start-0 w-100 h-100">
-            <div className="bg-blob blob-1"></div>
-            <div className="bg-blob blob-2"></div>
-          </div>
+            <div className="container position-relative" style={{ zIndex: 1 }}>
+              <h2
+                className="text-center text-white fw-bold display-4 mb-5"
+                data-aos="fade-up"
+              >
+                Our <span className="text-danger">Features</span>
+              </h2>
 
-          <div className="container position-relative" style={{ zIndex: 1 }}>
-            <h2
-              className="text-center text-white fw-bold display-4 mb-5"
-              data-aos="fade-up"
-            >
-              Our <span className="text-danger">Features</span>
-            </h2>
-
-            <div className="row g-4">
-              {values.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="col-12 col-sm-6 col-lg-4 d-flex align-items-stretch"
-                >
+              <div className="row g-4">
+                {values.map((item, idx) => (
                   <div
-                    className="rounded-10 shadow-md section uscard w-100"
-                    data-aos="zoom-in-up"
+                    key={idx}
+                    className="col-12 col-sm-6 col-lg-4 d-flex align-items-stretch"
                   >
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="card-img-top p-3"
-                      style={{ height: "180px", objectFit: "contain" }}
-                    />
-                    <div className="card-body text-center">
-                      <h5 className="fw-bold text-white">{item.title}</h5>
-                      <p className="text-white" style={{ lineHeight: 1.7 }}>
-                        {item.desc}
-                      </p>
+                    <div
+                      className="rounded-10 shadow-md section uscard w-100"
+                      data-aos="zoom-in-up"
+                    >
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        className="card-img-top p-3"
+                        style={{ height: "180px", objectFit: "contain" }}
+                      />
+                      <div className="card-body text-center">
+                        <h5 className="fw-bold text-white">{item.title}</h5>
+                        <p className="text-white" style={{ lineHeight: 1.7 }}>
+                          {item.desc}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
 
       <CEO />

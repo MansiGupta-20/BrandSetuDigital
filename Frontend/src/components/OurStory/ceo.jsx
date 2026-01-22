@@ -5,8 +5,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../App.css";
 
-import customBoyImage from "../../assets/Founder1.png";
-import customGirlImage from "../../assets/Founder2.png";
+import customBoyImage from "../../assets/founder-brandsetu.webp";
+import customGirlImage from "../../assets/ceo-brandsetu.webp";
 
 const VisionariesPage = () => {
   useEffect(() => {
@@ -38,8 +38,8 @@ const VisionariesPage = () => {
             style={{ maxWidth: "720px" }}
             data-aos="fade-up"
           >
-            Two passionate friends from Sage University who believed that travel
-            should feel personal, safe, and deeply connected to local culture.
+            Built by two passionate professionals who believe in honest work, smart digital strategy, and long-term business growth.
+
           </p>
         </div>
 
@@ -58,16 +58,17 @@ const VisionariesPage = () => {
 
               <Card.Body className="p-4">
                 <h4 className="fw-bold mb-1">SOUMITRA BAJPAI</h4>
-                <p className="text-warning fw-semibold mb-3">
+                <p className="text-warning  fw-semibold mb-3">
                   Co-Founder & Visionary
                 </p>
-                <p className="text-white mb-0">
-                  At BrandSetu Digital, I believe great brands are built where
-                  strategy meets creativity. Every idea we craft is rooted in
-                  purpose, clarity, and measurable impact. We don’t follow
-                  trends — we shape digital identities that last. Innovation is
-                  our mindset, excellence is our standard. Our goal is simple:
-                  turn brands into experiences people remember.
+                <p className="text-white text-justify mb-0">
+                  At Brand Setu Digital, I bring over 15 years of experience to
+                  help businesses grow with confidence and clarity. I understand
+                  the frustration of putting in effort without seeing real
+                  progress. That’s why my focus is on building trust, long-term
+                  growth, and results that truly matter. My goal is to support
+                  brands not just in growing faster, but in growing smarter and
+                  stronger.
                 </p>
               </Card.Body>
             </Card>
@@ -89,13 +90,14 @@ const VisionariesPage = () => {
                 <p className="text-warning fw-semibold mb-3">
                   Co-Founder & Strategist
                 </p>
-                <p className="text-white mb-0">
-                  BrandSetu Digital was created to help businesses grow with
-                  meaning, not noise. Technology, design, and data come together
-                  in everything we deliver. We focus on solutions that drive
-                  trust, engagement, and real results. Every project is a
-                  partnership, not just a service. Because true growth happens
-                  when vision meets execution.
+                <p className="text-white text-justify mb-0">
+                  At BrandSetu Digital, I bring 5+ years of experience working
+                  closely with growing businesses and understanding their real
+                  challenges. I believe growth is not about shortcuts, but about
+                  patience, right decisions, and consistent effort. My focus is
+                  on helping brands move forward with confidence, clear
+                  direction, and a strong long-term vision they can truly
+                  believe in.
                 </p>
               </Card.Body>
             </Card>
@@ -109,7 +111,7 @@ const VisionariesPage = () => {
               <BsHeart size={26} className="text-white" />
             </div>
             <h5 className="fw-bold">Friendship First</h5>
-            <p className="text-dark small px-3">
+            <p className="text-dark px-3">
               Built on trust, respect, and years of friendship that transformed
               into a shared mission.
             </p>
@@ -120,7 +122,7 @@ const VisionariesPage = () => {
               <BsLightbulb size={26} className="text-white" />
             </div>
             <h5 className="fw-bold">Purpose-Driven Innovation</h5>
-            <p className="text-dark small px-3">
+            <p className="text-dark px-3">
               Every feature is designed to solve real Businesses problems with
               simplicity and clarity.
             </p>
@@ -131,7 +133,7 @@ const VisionariesPage = () => {
               <BsPeople size={26} className="text-white" />
             </div>
             <h5 className="fw-bold">People-Centric Thinking</h5>
-            <p className="text-dark small px-3">
+            <p className="text-dark px-3">
               designing strategies and digital experiences that prioritize real
               human needs.
             </p>

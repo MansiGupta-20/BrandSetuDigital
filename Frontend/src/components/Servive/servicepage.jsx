@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import DetailedServices from "../Servive/detailedservices";
 import Brands from "../Home/brands";
 import WhatOurBrandsSay from "../Servive/BrandSays";
+import HeroImg from "../../assets/Performance-marketing-agency.jpg";
 
 const Services = () => {
   useEffect(() => {
@@ -26,8 +27,7 @@ const Services = () => {
     opacity: Math.random() * 0.1 + 0.04,
   }));
 
-  const heroImage =
-    "https://static.vecteezy.com/system/resources/thumbnails/006/201/844/small/abstract-background-with-black-and-yellow-color-combination-gold-color-combination-vector.jpg";
+  const heroImage = HeroImg;
 
   return (
     <section className="hero-section position-relative overflow-hidden py-3 pt-5">

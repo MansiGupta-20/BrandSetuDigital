@@ -1,14 +1,23 @@
-/* HERO BASE */
+/* ================= HERO BASE ================= */
 .pf-hero {
   background: linear-gradient(180deg, #ffd400, #ffc400);
+  position: relative;
+  overflow: hidden;
 }
 
-/* LEFT */
+/* Maintain hero height on large screens */
+@media (min-width: 992px) {
+  .pf-hero {
+    min-height: 100vh;
+  }
+}
+
+/* ================= LEFT ================= */
 .pf-left {
   z-index: 2;
 }
 
-/* BADGE */
+/* ================= BADGE ================= */
 .pf-badge {
   background: rgba(255, 255, 255, 0.25);
   color: #860000;
@@ -20,16 +29,39 @@
   width: fit-content;
 }
 
+/* Tablet */
+@media (max-width: 992px) {
+  .pf-badge {
+    padding: 9px 20px;
+    font-size: 12.5px;
+    letter-spacing: 1.3px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .pf-badge {
+    padding: 8px 18px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .pf-badge {
+    padding: 7px 16px;
+    font-size: 11.5px;
+    letter-spacing: 1.1px;
+  }
+}
+
+/* ================= BUTTONS ================= */
 .pf-btn-primary {
   background: #111;
   color: #ffd400;
   border-radius: 50px;
   font-weight: 700;
-}
-
-.pf-btn-primary:hover {
-  background: #9a9999;
-  color: #000;
 }
 
 .pf-btn-primary:hover {
@@ -49,12 +81,14 @@
   color: #000;
 }
 
-/* RIGHT */
+/* ================= RIGHT ================= */
 .pf-right {
   background: linear-gradient(135deg, #000000, #000000);
+  position: relative;
+  overflow: hidden;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .pf-grid {
   position: absolute;
   inset: 0;
@@ -67,13 +101,31 @@
   opacity: 0.4;
 }
 
-/* IMAGE */
+/* Scale grid safely on smaller screens */
+@media (max-width: 768px) {
+  .pf-grid {
+    background-size: 300px 300px;
+    opacity: 0.25;
+  }
+}
+
+/* ================= IMAGE CARD ================= */
 .pf-image-card {
   max-width: 520px;
+  width: 100%;
   z-index: 2;
 }
 
-/* DIAGONAL */
+/* Prevent overflow on short screens */
+.pf-hero-video {
+  width: 150rem;
+  height: auto;
+  max-height: 150rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* ================= DIAGONAL ================= */
 .pf-diagonal {
   position: absolute;
   top: 0;
@@ -85,41 +137,24 @@
   z-index: 1;
 }
 
-/* ================= RESPONSIVE FIXES ================= */
-/* ================== MOBILE HERO ROOT FIX ================== */
-
+/* ================= MOBILE & TABLET ================= */
 @media (max-width: 991px) {
 
-  /* KILL DESKTOP HEIGHT LOGIC */
   .pf-hero {
     height: auto !important;
     min-height: auto !important;
-    padding-top: 100px !important; /* navbar clearance */
+    padding-top: 100px !important;
     padding-bottom: 40px;
   }
 
-  .pf-hero .container,
-  .pf-hero .row {
-    height: auto !important;
-    min-height: auto !important;
-  }
-
-  /* REMOVE DIAGONAL COMPLETELY */
   .pf-diagonal {
     display: none !important;
   }
 
-  /* LEFT CONTENT — CLEAN MOBILE HERO */
   .pf-left {
     padding: 0 1.25rem !important;
     text-align: center;
     align-items: center;
-  }
-
-  .pf-badge {
-    font-size: 11px;
-    padding: 6px 16px;
-    margin-bottom: 10px;
   }
 
   .pf-left h1 {
@@ -136,7 +171,6 @@
     margin: 0 auto 22px;
   }
 
-  /* BUTTONS — FIX UGLY STACK */
   .pf-left .d-flex {
     flex-direction: column;
     gap: 12px;
@@ -151,30 +185,21 @@
     font-size: 0.95rem;
   }
 
-  /* RIGHT SIDE — VIDEO COMES NEXT */
   .pf-right {
     margin-top: 28px;
     padding: 0;
     background: #000;
-    min-height: auto !important;
   }
 
   .pf-image-card {
     width: 90%;
-    max-width: 340px;
+    max-width: 360px;
     margin: 0 auto;
     padding: 6px;
   }
-
-  .pf-hero-video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 14px;
-  }
 }
 
-/* SMALL PHONES */
+/* ================= SMALL PHONES ================= */
 @media (max-width: 420px) {
   .pf-left h1 {
     font-size: 1.9rem;
@@ -185,6 +210,14 @@
   }
 }
 
+/* ================= ULTRA-WIDE / 4K SAFETY ================= */
+@media (min-width: 1600px) {
+  .pf-left,
+  .pf-right {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
 
 /* Modern Mission/Vision/Values layout */
 .mvv-modern-container {
@@ -399,53 +432,4 @@
   }
 }
 
-@media (max-width: 991px) {
-  .pf-hero {
-    padding: 60px 0;
-  }
 
-  .pf-left {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .pf-badge {
-    margin: 0 auto 20px;
-    font-size: 12px;
-  }
-
-  .pf-left h1 {
-    font-size: 2.2rem;
-  }
-
-  .pf-left p {
-    font-size: 1rem;
-  }
-
-  .pf-btn-primary,
-  .pf-btn-secondary {
-    width: 100%;
-    margin-bottom: 12px;
-  }
-
-  .pf-image-card {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .pf-left h1 {
-    font-size: 1.9rem;
-  }
-
-  .pf-left p {
-    font-size: 0.95rem;
-  }
-}
-@media (max-width: 768px) {
-  .pf-grid {
-    background-size: 300px 300px;
-    opacity: 0.25;
-  }
-}

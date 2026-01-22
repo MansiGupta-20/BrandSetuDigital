@@ -21,7 +21,9 @@
 .navbar-container {
   position: fixed;
   top: 1rem;
-  width: 100%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   z-index: 1050;
@@ -46,6 +48,7 @@
   display: flex;
   align-items: center;
   gap: 0.65rem;
+  text-decoration: none;
 }
 
 .logo-img {
@@ -101,6 +104,7 @@
   border: 2px solid transparent !important;
   box-shadow: none !important;
   transition: all 0.3s ease;
+  text-align: center !important;
 }
 
 .main-btn:hover {
@@ -108,69 +112,75 @@
   color: #facc15 !important;
   border-color: #facc15 !important;
 }
-/* ================= MOBILE MENU ================= */
-.mobile-menu {
-  position: absolute;
-  /* top: 100%; start below navbar */
-  left: 0;
-  width: 100%;
-  background: rgba(39, 40, 34, 0.98);
-  backdrop-filter: blur(12px);
-  z-index: 1040;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+
+/* ================= FULLSCREEN MOBILE MENU ================= */
+.mobile-menu-full {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(250, 204, 21, 0.18),
+    rgba(39, 40, 34, 0.98) 65%
+  );
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(16px);
 }
 
-.mobile-menu-inner {
+/* CARD-LIKE CONTAINER (VISUAL DEPTH) */
+.mobile-menu-content {
+  width: 92%;
+  max-width: 420px;
+  text-align: center;
+  padding: 2.2rem 1.6rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 1.5rem 1rem;
+  gap: 1.4rem;
+
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 22px;
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45),
+    inset 0 0 20px rgba(250, 204, 21, 0.05);
 }
 
-.mobile-link {
-  font-size: 1.6rem;
+/* ================= MOBILE LINKS ================= */
+.mobile-link-modern {
+  display: block;
+  font-size: 1.65rem;
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
-  text-align: center;
-  width: 100%;
-  padding: 0.7rem 0;
-  transition: color 0.3s ease;
-  border-radius: 8px;
+  padding: 0.85rem 0;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.4px;
 }
 
-.mobile-link:hover {
-  background: rgba(250, 204, 21, 0.15);
+.mobile-link-modern:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(250, 204, 21, 0.22),
+    rgba(250, 204, 21, 0.08)
+  );
   color: #facc15;
+  transform: translateY(-2px) scale(1.03);
 }
 
-.mobile-menu .main-btn {
-  width: 90%;
-  justify-content: center;
-  padding: 0.8rem 0;
-  font-size: 1rem;
-}
-
-/* Small devices adjustments */
+/* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 576px) {
-  .mobile-link {
-    font-size: 1.5rem;
-    padding: 0.6rem 0;
+  .mobile-menu-content {
+    padding: 1.9rem 1.3rem;
+    gap: 1.2rem;
   }
 
-  .mobile-menu .main-btn {
-    width: 95%;
-    font-size: 0.95rem;
-    padding: 0.7rem 0;
+  .mobile-link-modern {
+    font-size: 1.45rem;
+    padding: 0.75rem 0;
   }
-}
 
-/* ================= RESPONSIVE (LOGIC ONLY) ================= */
-@media (max-width: 576px) {
   .logo-img {
     height: 2.6rem;
     width: 2.6rem;
@@ -183,22 +193,62 @@
   .logo-subtitle {
     font-size: 0.65rem;
   }
-
-  .mobile-link {
-    font-size: 1.8rem;
-  }
-
-  .mobile-menu-inner {
-    padding: 1.5rem 1rem;
-    gap: 1.5rem;
-  }
-
-  .mobile-menu {
-    padding-top: 5rem;
-  }
 }
 
 /* ==============FOOTER===================== */
+/* Social wrapper for responsive spacing */
+.social-wrapper {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Social Buttons (Desktop default unchanged) */
+.social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  background: #1f1f1f;
+  color: #facc15;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(250, 203, 21, 0.3);
+  touch-action: manipulation;
+}
+
+.social-btn:hover {
+  background: linear-gradient(135deg, #d7b012, #d7c654);
+  color: #272822;
+  transform: translateY(-3px) scale(1.2);
+  box-shadow: 0 5px 10px rgba(250, 203, 21, 0.7);
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .social-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .social-wrapper {
+    justify-content: center;
+  }
+
+  .social-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+}
 .footer-modern {
   background-color: #272822;
   color: #fff;
@@ -207,7 +257,7 @@
   padding-top: 1rem;
   overflow: hidden;
   z-index: 1; /* Ensure content above particles */
-} 
+}
 
 /* Floating particles */
 .footer-particle {
@@ -220,7 +270,7 @@
   left: 0;
   pointer-events: none; /* Critical fix for mobile taps */
   z-index: 0; /* Behind content */
-} 
+}
 
 /* Bring content above particles */
 .footer-modern .container,
@@ -255,7 +305,7 @@
   height: 2px;
   background-color: #c4a114;
   margin-top: 4px;
-} 
+}
 
 /* Footer Links */
 .footer-links li {
@@ -308,17 +358,17 @@
   color: #272822;
   transform: translateY(-3px) scale(1.2);
   box-shadow: 0 5px 10px rgba(250, 203, 21, 0.7);
-} 
+}
 
 /* Glow text effect */
 .glow-text {
   text-shadow: 0 0 2px rgba(250, 203, 21, 0.5);
-} 
+}
 
 /* Divider */
 .footer-divider {
   border-color: rgba(255, 255, 255, 0.1);
-} 
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -336,15 +386,14 @@
 /* ================= FOOTER LOGO TITLE FIX (MOBILE & TAB) ================= */
 @media (max-width: 991px) {
   .footer-brand .d-none.d-sm-block {
-    display: block !important;   /* show title */
+    display: block !important; /* show title */
     text-align: left;
   }
 
   .footer-brand {
-    justify-content: center;     /* keep alignment clean */
+    justify-content: center; /* keep alignment clean */
   }
 }
-
 
 /* ========================== REVIEW ===================== */
 
@@ -580,7 +629,9 @@
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 143, 150, 0.15);
+  box-shadow:
+    0 25px 40px rgba(0, 0, 0, 0.6),      /* black depth */
+    0 0 25px rgba(255, 193, 7, 0.45);   /* yellow glow */
 }
 
 .feature-icon {

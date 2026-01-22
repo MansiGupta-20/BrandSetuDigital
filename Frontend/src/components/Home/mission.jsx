@@ -12,19 +12,19 @@ const values = [
     title: "VISION",
     img: vision,
     desc:
-      "Our vision is to transform businesses into powerful brands by creating meaningful digital experiences that inspire trust, growth, and long-term success.",
+      "Our vision is to transform businesses into powerful brands by creating meaningful digital experiences that inspire trust, growth, and long term success.",
   },
   {
     title: "MISSION",
     img: mission,
     desc:
-      "We empower businesses with result-driven digital solutions, strategic marketing, and innovative technology to help them scale with confidence.",
+      "We empower businesses with result driven digital solutions, strategic marketing, and innovative technology to help them scale with confidence.",
   },
   {
     title: "INNOVATION",
     img: innovation,
     desc:
-      "We continuously explore new technologies, creative ideas, and data-driven strategies to keep brands ahead in a fast-changing digital world.",
+      "We continuously explore new technologies, creative ideas, and data-driven strategies to keep brands ahead in a fast changing digital world.",
   },
 ];
 
@@ -42,7 +42,7 @@ const MissionValues = () => {
 
         <p className="mb-5">
           At BrandSetu, we bridge the gap between businesses and branding through
-          strategy, creativity, and technology-driven solutions.
+          strategy, creativity, and technology driven solutions.
         </p>
 
         <div className="row g-4">

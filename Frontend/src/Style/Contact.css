@@ -107,3 +107,8 @@
   transform: translateY(-5px);
   transition: 0.3s ease;
 }
+
+.custom-close .btn-close {
+  filter: invert(72%) sepia(98%) saturate(600%) hue-rotate(5deg);
+  opacity: 1;
+}

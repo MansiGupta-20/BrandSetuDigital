@@ -164,6 +164,9 @@ export default function Reviews() {
           <h1 className="brands-title display-2 fw-bold">
             What <span>Our Clients Say</span>
           </h1>
+          <h5 className="fw-bold  text-danger pt-2">
+            Real feedback from real clients
+          </h5>
         </motion.div>
 
         <div

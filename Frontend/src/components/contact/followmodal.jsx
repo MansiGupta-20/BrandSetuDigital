@@ -53,16 +53,25 @@ const socialMedia = [
 export default function FollowModal({ show, onHide }) {
   return (
     <Modal show={show} onHide={onHide} centered size="md">
-      <Modal.Header closeButton className="border-0 bg-dark">
-        <Modal.Title className="fw-bold display-4 text-warning">Follow Us:</Modal.Title>
+      <Modal.Header
+        closeButton
+        className="border-0 bg-dark custom-close position-relative"
+      >
+        <Modal.Title className="fw-bold display-6 text-warning">
+          Follow Us:
+        </Modal.Title>
       </Modal.Header>
 
-      <Modal.Body className="bg-dark">
-        <h5 className="text-center text-warning mb-4">
+      <Modal.Body className="bg-dark position-relative overflow-hidden">
+        {/* Background blobs */}
+        <div className="bg-blob blob-1"></div>
+        <div className="bg-blob blob-2"></div>
+
+        <h5 className="text-center text-warning mb-4 position-relative">
           Connect with us on social media and stay updated!
         </h5>
 
-        <Row className="social-grid g-3 justify-content-center">
+        <Row className="social-grid g-3 justify-content-center position-relative">
           {socialMedia.map((social) => (
             <Col xs={4} sm={3} key={social.name} className="text-center">
               <a
@@ -74,16 +83,10 @@ export default function FollowModal({ show, onHide }) {
               >
                 {social.icon}
               </a>
-              <div className="mt-1 small">{social.name}</div>
+              <div className="mt-1 small text-light">{social.name}</div>
             </Col>
           ))}
         </Row>
-
-        <div className="text-center mt-4">
-          <Button className= "main-btn rounded-pill d-flex align-items-center" onClick={onHide}>
-            Close
-          </Button>
-        </div>
       </Modal.Body>
     </Modal>
   );

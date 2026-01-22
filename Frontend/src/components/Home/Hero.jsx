@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Star } from "lucide-react";
 import { Link } from "react-router-dom"; // ✅ Import Link
-import heroImage from "../../assets/hero1.png";
+import heroVideo from "../../assets/digital-marketing-agency.mp4";
 import "../../App.css";
 import "../../Style/Home.css";
 import Services from "../../components/Home/HomeServices";
@@ -97,8 +97,9 @@ export function Hero() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="hero-description ms-1"
               >
-                We transform small businesses into powerful brands through
-                strategic marketing & innovative digital solutions.
+                We help businesses grow with result-driven digital marketing,
+                branding, SEO, social media marketing, and performance-focused
+                online strategies.
               </motion.p>
 
               {/* Navigation Buttons */}
@@ -176,9 +177,12 @@ export function Hero() {
                       {/* IMAGE ON FIRST CARD */}
                       {i === 0 && (
                         <div className="card-logo p-4">
-                          <motion.img
-                            src={heroImage}
-                            alt="Brand Visual"
+                          <motion.video
+                            src={heroVideo}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
                             style={{
                               width: "100%",
                               height: "100%",

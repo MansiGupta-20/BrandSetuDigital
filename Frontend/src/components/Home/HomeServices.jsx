@@ -1,8 +1,19 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Monitor, Search, Share2, BarChart3, Palette } from "lucide-react";
+import {
+  Monitor,
+  Search,
+  Share2,
+  BarChart3,
+  Palette,
+  Subtitles,
+} from "lucide-react";
 import "../../Style/Home.css";
 import "../../App.css";
+import websitedevelopmentcompany from "../../../src/assets/website-development-company.webp";
+import automationandmaintainance from "../../../src/assets/autimationandmaintainance.jpg";
+import shootandvideo from "../../../src/assets/shootandvideo.jpg";
+import WhatsappMarketing from "../../../src/assets/whatsapp-marketing-services.avif";
 
 const services = [
   {
@@ -16,7 +27,8 @@ const services = [
       "Graphics Design & E-commerce",
     ],
     icon: Monitor,
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    image: websitedevelopmentcompany,
+    subtitle: "Design • Performance • Conversion",
   },
   {
     title: "Automation & Maintenance",
@@ -29,12 +41,12 @@ const services = [
       "CRM setup & Business Automation",
     ],
     icon: Monitor,
-    image:
-      "https://radiantappliances.com/images/it_service/top%20automation.jpg",
+    image: automationandmaintainance,
+    subtitle: "Automation • Stability • Support",
   },
   {
     title: "Shoots & Video Editing",
-    desc: "We provide reliable maintenance to keep your digital assets running smoothly. This includes updates, security monitoring, and performance optimization.",
+    desc: "Build a strong brand presence with engaging content, reels, campaigns, and data-driven growth strategies.",
     points: [
       "Reels, shorts & social videos",
       "Promotional & ad video editing",
@@ -43,12 +55,12 @@ const services = [
       "Event & Product Shoot/Promotion",
     ],
     icon: Monitor,
-    image:
-      "https://vegas-magazine.com/wp-content/uploads/2020/01/header-landingpage-vegas-pro-video-photography-int-2.jpg",
+    image: shootandvideo,
+    subtitle: "Creativity • Storytelling • Impact",
   },
   {
     title: "WhatsApp/Instagram Marketing",
-    desc: "Build a strong brand presence with engaging content, reels, campaigns, and data-driven growth strategies.",
+    desc: "We create meaningful connections that drive engagement, growth, and results.",
     points: [
       "Instant Communication & High Engagement",
       "Cost-Effective & Interactive Features",
@@ -57,10 +69,11 @@ const services = [
     ],
     icon: Monitor,
     image:
-      "https://img.freepik.com/premium-vector/whatsapp-marketing-megaphone-digital-marketing-social-media-concept_112255-1878.jpg",
+      WhatsappMarketing,
+    subtitle: "Engagement • Reach • Conversations",
   },
   {
-    title: "SEO(Search Engine Optimization) & Local Visibility on Google",
+    title: "SEO (Search Engine Optimization) & Local Visibility",
     desc: "Rank higher on Google and dominate your local market with proven SEO strategies that bring consistent organic traffic.",
     points: [
       "Keyword Research",
@@ -71,6 +84,7 @@ const services = [
     icon: Search,
     image:
       "https://img.freepik.com/premium-vector/seo-search-engine-optimization-concept-vector-illustration_185038-486.jpg",
+    subtitle: "Ranking • Visibility • Traffic",
   },
   {
     title: "Social Media Marketing",
@@ -84,6 +98,7 @@ const services = [
     icon: Share2,
     image:
       "https://gosharpener.com/content/uploads/photos/2024/09/sngine_554b7fb4220580094ff96ca152962eb8.jpg",
+    subtitle: "Content • Engagement • Growth",
   },
   {
     title: "Google & Meta Ads",
@@ -98,6 +113,7 @@ const services = [
     icon: BarChart3,
     image:
       "https://img.freepik.com/free-vector/pop-ups-concept-illustrated_23-2149121840.jpg",
+    subtitle: "Targeting • ROI • Performance",
   },
   {
     title: "Branding & Graphic Design",
@@ -111,6 +127,7 @@ const services = [
     icon: Palette,
     image:
       "https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2024/01/9_types_graphic_design.jpg",
+    subtitle: "Identity • Consistency • Recognition",
   },
 ];
 
@@ -150,7 +167,7 @@ export default function Services() {
           <h1 className="display-3 fw-bold text-white mt-3">
             Powerful Digital Solutions
           </h1>
-          <p className="text-light opacity-75 mt-2">
+          <p className="text-light opacity-75 fs-5 mt-2">
             Everything your brand needs to grow digitally
           </p>
         </div>
@@ -173,13 +190,9 @@ export default function Services() {
                     className="img-fluid preview-image mb-4"
                   />
 
-                  <h2 className="fw-bold text-white">
-                    {activeService.title}
-                  </h2>
+                  <h2 className="fw-bold text-white">{activeService.title}</h2>
 
-                  <p className="preview-desc mt-3">
-                    {activeService.desc}
-                  </p>
+                  <p className="preview-desc mt-3">{activeService.desc}</p>
 
                   <ul className="service-points mt-4">
                     {activeService.points.map((point, i) => (
@@ -211,9 +224,7 @@ export default function Services() {
                     </div>
                     <div>
                       <h4 className="fw-bold mb-1">{service.title}</h4>
-                      <p className="mb-0">
-                        Strategy • Creativity • Execution
-                      </p>
+                      <p className="mb-0">{service.subtitle}</p>
                     </div>
                   </motion.div>
                 );

@@ -221,7 +221,7 @@
   position: relative;
   width: 100vw;
 
-  background-image: url("../assets/fronthero.jpg");
+  background-image: url("../assets/Best-digital-marketing-agency.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -549,9 +549,6 @@
   .service-item {
     align-items: flex-start;
   }
-  .brand-title span {
-    color: rgb(0, 137, 201);
-  }
 
   .service-icon {
     width: 44px;
@@ -590,9 +587,17 @@
   color: #111;
 }
 
+/* Mobile view */
+@media (max-width: 768px) {
+  .brands-title .colab {
+    color:rgb(212, 38, 38) !important; /* Bootstrap blue */
+  }
+}
+
+
 .brands-subtitle {
   font-size: 1.05rem;
-  color: #6b7280;
+  color: rgb(0, 114, 190) !important;
 }
 
 /* Marquee */

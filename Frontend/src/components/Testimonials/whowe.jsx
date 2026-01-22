@@ -7,16 +7,17 @@ import "../../Style/portfolio.css";
 import "../../App.css";
 import "../../Style/Home.css";
 
-import Founder1 from "../../assets/Founder1.png";
-import Dipesh from "../../assets/dipesh.png";
-import yuvraj from "../../assets/yuvraj.JPG";
-import mansi from "../../assets/mansi.JPG";
-import shivani from "../../assets/shivani.JPG";
-import Founder2 from "../../assets/Founder2.png";
-import ProblemImg from "../../assets/ProblemImg.png";
-import StrategyImg from "../../assets/strategy1.png";
-import SolutionImg from "../../assets/solution.png";
+import Founder1 from "../../assets/founder-brandsetu.webp";
+import Dipesh from "../../assets/dipesh-brandsetu.webp";
+import yuvraj from "../../assets/yuvraj-brandsetu.JPG";
+import mansi from "../../assets/mansi-brandsetu.webp";
+import shivani from "../../assets/shivani-brandsetu.webp";
+import Founder2 from "../../assets/ceo-brandsetu.webp";
+import ProblemImg from "../../assets/top-web-development-company.png";
+import StrategyImg from "../../assets/best-Video-editor-agency.png";
+import SolutionImg from "../../assets/Ai-automation-services.png";
 import HeroSection from "./Testimonialmain";
+import Brandsetu from "../../assets/Brandsetu-digital-agency-about-us.jpg";
 
 export default function WhoAreWe() {
   useEffect(() => {
@@ -73,8 +74,8 @@ export default function WhoAreWe() {
                 <span className="text-danger">Who</span> Are We?
               </h1>
               <p className="fs-5 text-dark fw-semibold opacity-85 mx-auto col-lg-8">
-                We are a forward-thinking company driven by innovation,
-                creativity, and excellence.
+                We are a forward-thinking top marketing company driven by
+                innovation, creativity, and excellence.
               </p>
             </Col>
           </Row>
@@ -83,20 +84,21 @@ export default function WhoAreWe() {
           <Row className="mb-5 align-items-center">
             <Col lg={6}>
               <img
-                src="https://www.managedoutsource.com/wp-content/uploads/2019/01/bpo-concerns-and-considerations.jpg"
+                src={Brandsetu}
                 alt="About Us"
                 className="img-fluid rounded-4 shadow-lg"
               />
             </Col>
             <Col lg={6}>
-              <h1 className="fw-bold mb-3 text-dark">Our Concern!!!</h1>
+              <h1 className="fw-bold mb-3 text-dark">Why<span className="text-danger"> We </span>Exist!!!</h1>
               <p className="fs-5 text-dark text-justify fw-semibold opacity-85">
-                Founded with the goal of transforming bold ideas into reality,
-                we are a passionate team committed to innovation.
-              </p>
-              <p className="fs-5 text-dark text-justify fw-semibold opacity-85">
-                We believe in integrity, excellence, and continuous growth,
-                always putting our clients and their vision first.
+                We help brands grow through clear strategy, smart execution, and
+                measurable results. Our focus is on building long-term value by
+                understanding your business goals and delivering solutions that
+               truly work.  <br /> 
+               Founded with the goal of transforming bold
+                ideas into reality, we are a passionate team committed to
+                innovation.
               </p>
             </Col>
           </Row>
@@ -104,22 +106,22 @@ export default function WhoAreWe() {
           {/* Problem, Strategy, Solution */}
           <Row className="mb-5 text-center justify-content-center">
             {[
-  {
-    img: ProblemImg,
-    title: "Problem",
-    text: "Many businesses struggle with low online visibility, inconsistent branding, and poor digital engagement. Limited technical knowledge and ineffective marketing strategies prevent them from reaching the right audience. Manual processes slow growth and increase operational costs.",
-  },
-  {
-    img: StrategyImg,
-    title: "Strategy",
-    text: "BrandSetu adopts a research-driven and customer-centric digital strategy tailored to each business. We analyze market trends, audience behavior, and competitors to create impactful brand positioning. Our approach combines creative design, performance marketing, and automation.",
-  },
-  {
-    img: SolutionImg,
-    title: "Solution",
-    text: "BrandSetu delivers end-to-end digital solutions including branding, websites, SEO, paid ads, and automation. We leverage modern tools and technologies to build a strong online presence for businesses. Our solutions improve visibility, lead generation, and brand credibility.",
-  },
-].map((item, index) => (
+              {
+                img: ProblemImg,
+                title: "Problem",
+                text: "Many businesses struggle with low online visibility, inconsistent branding, and poor digital engagement. Limited technical knowledge and ineffective marketing strategies prevent them from reaching the right audience. Manual processes slow growth and increase operational costs.",
+              },
+              {
+                img: StrategyImg,
+                title: "Strategy",
+                text: "BrandSetu adopts a research-driven and customer-centric digital strategy tailored to each business. We analyze market trends, audience behavior, and competitors to create impactful brand positioning. Our approach combines creative design, performance marketing, and automation.",
+              },
+              {
+                img: SolutionImg,
+                title: "Solution",
+                text: "BrandSetu delivers end-to-end digital solutions including branding, websites, SEO, paid ads, and automation. We leverage modern tools and technologies to build a strong online presence for businesses. Our solutions improve visibility, lead generation, and brand credibility.",
+              },
+            ].map((item, index) => (
               <Col lg={4} md={6} className="mb-5" key={index}>
                 <div className="mvv-modern-container position-relative overflow-hidden">
                   <div className="mvv-circle-bg"></div>
@@ -132,28 +134,28 @@ export default function WhoAreWe() {
                   <h4 className="fw-bold mt-4 text-dark display-6">
                     {item.title}
                   </h4>
-                  <p className="text-dark opacity-85 mt-2">{item.text}</p>
+                  <p className="text-dark opacity-85  mt-2">{item.text}</p>
                 </div>
               </Col>
             ))}
           </Row>
 
           {/* Team Section */}
-          <Row className="team-section mb-3">
-            <Row className="mb-5 text-center">
-              <Col className="mb-5">
+          <Row className="team-section">
+            <Row className="mb-3 text-center">
+              <Col>
                 <h1 className="fw-bold text-dark display-3">
                   The <span className="text-danger">Minds</span> Behind{" "}
                   <span className="text-danger">BrandSetu</span>
                 </h1>
-                <p className="text-dark fw-semibold opacity-85">
+                <p className="text-dark fs-5 fw-semibold opacity-85">
                   Passionate people shaping powerful brands.
                 </p>
               </Col>
             </Row>
 
             {/* Founders */}
-            <Row id="team-section" className="justify-content-center mb-3">
+            <Row id="team-section" className="justify-content-center mb-5">
               <Col xs={12} className="text-center mb-4">
                 <h3 className="fw-bold text-danger display-5">Founders</h3>
               </Col>
@@ -176,7 +178,9 @@ export default function WhoAreWe() {
                     </div>
                     <div className="team-info">
                       <h5>{founder.name}</h5>
-                      <span>{founder.role}</span>
+                      <span className="text-danger fw-semibold">
+                        {founder.role}
+                      </span>
                     </div>
                   </div>
                 </Col>
@@ -185,10 +189,10 @@ export default function WhoAreWe() {
 
             {/* Core Team */}
             <Row>
-              <Col xs={12} className="text-center mb-4">
-                <h3 className="fw-bold display-5 text-danger">
-                  Pillars are Here
-                </h3>
+              <Col xs={12} className="text-center mb-5 mt-3">
+                <h4 className="fw-bold display-6 text-danger">
+                  Pillars Of <span className="text-dark">BrandSetu</span>
+                </h4>
               </Col>
               {[
                 {
@@ -219,7 +223,9 @@ export default function WhoAreWe() {
                     </div>
                     <div className="team-info">
                       <h5>{member.name}</h5>
-                      <span>{member.role}</span>
+                      <span className="text-danger fw-semibold">
+                        {member.role}
+                      </span>
                     </div>
                   </div>
                 </Col>
@@ -228,13 +234,13 @@ export default function WhoAreWe() {
           </Row>
 
           {/* Explore Work */}
-          <Row id="work-section" className="work-section my-5">
+          <Row id="work-section" className="work-section my-5 pt-3   mt-5">
             <Row className="text-center mb-5">
               <Col>
                 <h1 className="fw-bold display-4">
                   Our <span className="text-danger">Work</span>
                 </h1>
-                <p className="text-muted col-lg-7 mx-auto">
+                <p className="text-muted fs-5 col-lg-7 mx-auto">
                   We collaborate with businesses, restaurants, and fashion
                   brands to create impactful digital experiences.
                 </p>
@@ -307,7 +313,7 @@ export default function WhoAreWe() {
                     tag: "Personal Care",
                     img: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908",
                     desc: "Customized hair and skincare solutions.",
-                    link: "https://baretanatomy.com",
+                    link: "https://bareanatomy.com",
                   },
                   {
                     title: "The Whole Truth",

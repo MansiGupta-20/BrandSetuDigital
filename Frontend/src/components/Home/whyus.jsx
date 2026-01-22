@@ -16,7 +16,7 @@ const features = [
   },
   {
     icon: Heart,
-    title: "Brand-Centric Approach",
+    title: "Brand Centric Approach",
     description:
       "Every strategy is designed around your brand’s vision, audience, and goals to create a strong emotional connection.",
     color: "danger",
@@ -26,7 +26,7 @@ const features = [
     icon: MapPin,
     title: "Result-Driven Strategies",
     description:
-      "We focus on measurable outcomes like leads, reach, and conversions—not just likes and impressions.",
+      "We focus on measurable outcomes like leads, reach, and conversions, not just likes and impressions.",
     color: "success",
     bg: "bg-light-green",
   },
@@ -34,7 +34,7 @@ const features = [
     icon: Gem,
     title: "Affordable & Scalable",
     description:
-      "High-quality digital solutions that fit your budget and scale smoothly as your business grows.",
+      "High quality digital solutions that fit your budget and scale smoothly as your business grows.",
     color: "warning",
     bg: "bg-light-yellow",
   },
@@ -50,15 +50,14 @@ const WhySetu = () => {
             <span className="gradient-text">BRANDSETU?</span>
           </h1>
           <p className="lead text-muted fw-semibold">
-            We connect you with passionate local guides for unforgettable
-            authentic experiences
+            Because we focus on real growth, not just marketing
           </p>
         </div>
 
         <Row className="g-4 mb-5 features-grid">
           {features.map((feature, idx) => (
             <Col key={idx} md={6} lg={3}>
-              <Card className="text-center bg-dark h-100 rounded-4 border-0 feature-card position-relative overflow-hidden">
+              <Card className="text-center bg-dark  h-100 rounded-4 border-0 feature-card position-relative overflow-hidden">
                 {/* Blobs behind card content */}
                 <div className="bg-blob blob-1"></div>
                 <div className="bg-blob blob-2"></div>
@@ -69,8 +68,12 @@ const WhySetu = () => {
                   >
                     <feature.icon size={32} />
                   </div>
-                  <Card.Title className="text-white mt-3">{feature.title}</Card.Title>
-                  <Card.Text className="text-white">{feature.description}</Card.Text>
+                  <Card.Title className="text-white mt-3">
+                    {feature.title}
+                  </Card.Title>
+                  <Card.Text className="text-white">
+                    {feature.description}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Col>

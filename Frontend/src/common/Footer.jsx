@@ -6,16 +6,20 @@ import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
-  // Generate floating particles
   const particles = Array.from({ length: 15 });
 
   return (
-    <footer className="footer-modern position-relative overflow-hidden">
+    <footer
+      className="footer-modern position-relative overflow-hidden"
+      role="contentinfo"
+      aria-label="Website footer"
+    >
       {/* Floating Particles */}
       {particles.map((_, i) => (
         <motion.div
           key={i}
           className="footer-particle"
+          aria-hidden="true"
           animate={{
             x: [0, Math.random() * 100 - 50, 0],
             y: [0, Math.random() * 100 - 50, 0],
@@ -27,132 +31,121 @@ const Footer = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          style={{ pointerEvents: "none" }} // 🔑 ensures particles don't block clicks
+          style={{ pointerEvents: "none" }}
         />
       ))}
 
       <div className="container py-3 position-relative" style={{ zIndex: 2 }}>
         <div className="row gy-4">
           {/* Brand */}
-          <div className="col-lg-3 col-md-6 d-flex flex-column align-items-start">
+          <div className="col-lg-3 col-md-6">
             <div className="footer-brand d-flex align-items-center gap-2 mb-3">
-              <img src={Logo} alt="BrandSetu" height="70" />
+              <img
+                src={Logo}
+                alt="BrandSetu Digital Logo"
+                height="70"
+              />
               <div className="logo-text d-flex flex-column">
                 <div className="logo-title">BRANDSETU</div>
                 <div className="logo-subtitle">DIGITAL</div>
               </div>
             </div>
             <p className="text-light-50 glow-text">
-              Driving digital growth with creative strategies, modern design, and
-              measurable results.
+              Driving digital growth with creative strategies, modern design,
+              and measurable results.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="col-lg-3 col-md-6">
+          <div
+            className="col-lg-3 col-md-6"
+            aria-label="Footer quick links"
+          >
             <h6 className="footer-title text-light mb-3">Quick Links</h6>
             <ul className="list-unstyled footer-links">
-              <li>
-                <a href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/services" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="/testimonials" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Our Story
-                </a>
-              </li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/testimonials">Portfolio</a></li>
+              <li><a href="/about">Our Story</a></li>
             </ul>
           </div>
 
           {/* Services */}
-          <div className="col-lg-3 col-md-6">
+          <div
+            className="col-lg-3 col-md-6"
+            aria-label="Footer services"
+          >
             <h6 className="footer-title text-light mb-3">Services</h6>
             <ul className="list-unstyled footer-links">
-              <li>
-                <a href="/services#web" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Web Design & Development
-                </a>
-              </li>
-              <li>
-                <a href="/services#seo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  SEO & Marketing
-                </a>
-              </li>
-              <li>
-                <a href="/services#branding" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Brand Strategy
-                </a>
-              </li>
-              <li>
-                <a href="/services#social" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Social Media Marketing
-                </a>
-              </li>
-              <li>
-                <a href="/services#social" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  Shoots & Editing
-                </a>
-              </li>
+              <li><a href="/services#web">Web Design & Development</a></li>
+              <li><a href="/services#seo">SEO & Marketing</a></li>
+              <li><a href="/services#branding">Brand Strategy</a></li>
+              <li><a href="/services#social">Social Media Marketing</a></li>
+              <li><a href="/services#social">Shoots & Editing</a></li>
             </ul>
           </div>
 
-          {/* Contact & Social */}
+          {/* Contact & Social (UI UNCHANGED) */}
           <div className="col-lg-3 col-md-6">
             <h6 className="footer-title text-light mb-3">Contact Us</h6>
-            <p className="text-light-50 mb-2">📧 Brandsetudigital@gmail.com</p>
-            <p className="text-light-50 mb-3">📞 +91 6232363639</p>
 
-            <div className="d-flex gap-3 mt-2">
+            <p className="text-light-50 mb-2">
+              📧{" "}
+              <span aria-label="Email BrandSetu Digital">
+                Brandsetudigital@gmail.com
+              </span>
+            </p>
+
+            <p className="text-light-50 mb-3">
+              📞{" "}
+              <span aria-label="Phone number">
+                +91 6232363639
+              </span>
+            </p>
+
+            <div
+              className="social-wrapper"
+              aria-label="BrandSetu social media links"
+            >
               <motion.a
                 whileHover={{ scale: 1.2 }}
+                className="social-btn"
                 href="https://www.linkedin.com"
-                className="social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="BrandSetu on LinkedIn"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn aria-hidden="true" />
               </motion.a>
+
               <motion.a
                 whileHover={{ scale: 1.2 }}
+                className="social-btn"
                 href="https://www.instagram.com/brandsetudigital?igsh=NDMyNzc4aHkxOW02"
-                className="social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="BrandSetu on Instagram"
               >
-                <FaInstagram />
+                <FaInstagram aria-hidden="true" />
               </motion.a>
+
               <motion.a
                 whileHover={{ scale: 1.2 }}
-                href="https://www.facebook.com/share/1GsguCpjJq/?mibextid=wwXIfr"
                 className="social-btn"
+                href="https://www.facebook.com/share/1GsguCpjJq/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="BrandSetu on Facebook"
               >
-                <FaFacebookF />
+                <FaFacebookF aria-hidden="true" />
               </motion.a>
             </div>
           </div>
         </div>
 
-        <hr className="footer-divider my-2" />
+        <hr className="footer-divider my-2" aria-hidden="true" />
 
-        {/* Bottom Bar */}
         <motion.div
           className="d-flex justify-content-between flex-column flex-md-row text-light-50 small"
           initial={{ opacity: 0, y: 20 }}
@@ -160,8 +153,7 @@ const Footer = () => {
           transition={{ duration: 1 }}
         >
           <span>
-            © {new Date().getFullYear()} BrandSetu Digitals. All rights
-            reserved.
+            © {new Date().getFullYear()} BrandSetu Digitals. All rights reserved.
           </span>
           <span>Designed & Developed by BrandSetu Team</span>
         </motion.div>

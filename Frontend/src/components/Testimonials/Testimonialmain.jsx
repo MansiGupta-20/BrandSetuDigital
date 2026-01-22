@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../Style/portfolio.css";
-import Portfolio from "../../assets/portfolio.mp4";
+import Portfolio from "../../assets/Brandsetu-company-values.mp4";
 import "../../App.css";
 
 export default function HeroSection() {
@@ -52,7 +52,7 @@ export default function HeroSection() {
             {/* GRID OVERLAY */}
             <div className="pf-grid"></div>
 
-            <div className="pf-image-card shadow-lg rounded-4 p-3">
+            <div className="pf-image-card shadow-lg rounded-4 p-3 pt-5">
               <video
                 className="img-fluid rounded-3 pf-hero-video"
                 src={Portfolio} 

@@ -8,6 +8,7 @@ import {
   Toast,
   ToastContainer,
 } from "react-bootstrap";
+import emailjs from "emailjs-com";
 import "../../Style/Career.css";
 
 export default function ApplyModal({ show, onHide, job }) {
@@ -43,6 +44,7 @@ export default function ApplyModal({ show, onHide, job }) {
     setLoading(true);
 
     try {
+      // Send to backend first
       const data = new FormData();
       Object.keys(formData).forEach((key) => data.append(key, formData[key]));
       data.append("jobTitle", job);
@@ -57,7 +59,28 @@ export default function ApplyModal({ show, onHide, job }) {
         throw new Error(errorData.message || "Failed to submit application");
       }
 
-      // Show success toast
+      // Send email via EmailJS
+      const emailParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        location: formData.location,
+        experience: formData.experience,
+        profile: formData.profile,
+        about: formData.about,
+        jobTitle: job,
+        // Note: EmailJS cannot send file attachments directly from FormData
+        // You can include resume name or a download link
+        resumeName: formData.resume ? formData.resume.name : "No file attached",
+      };
+
+      await emailjs.send(
+        "service_r2lvfha", // Your Service ID
+        "template_dsktag9", // Your Career Template ID
+        emailParams,
+        "Lv5WJmYXNAkP0Fg9Z" // Your Public Key
+      );
+
       setToast({
         show: true,
         message: "Application submitted successfully!",
@@ -91,7 +114,10 @@ export default function ApplyModal({ show, onHide, job }) {
       <Modal.Body className="apply-clean-body p-0">
         <Row className="g-0">
           {/* LEFT PANEL */}
-          <Col md={5} className="apply-left text-light d-flex align-items-center">
+          <Col
+            md={5}
+            className="apply-left text-light d-flex align-items-center"
+          >
             <div className="p-4 p-md-5">
               <span className="badge theme-badge mb-3">CAREERS</span>
               <h2 className="fw-bold mb-3">
